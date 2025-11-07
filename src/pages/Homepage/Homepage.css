@@ -1,0 +1,115 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #28241C 0%, #575246 100%);
+  text-align: center;
+  overflow: hidden;
+  color: #fffdd0;
+}
+
+.profile-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #c6bba4;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  margin-bottom: 20px;
+  animation: popIn 1s ease-out;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.question-text {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #fffdd0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.yes-button, .no-button {
+  padding: 12px 30px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.yes-button {
+  background: linear-gradient(45deg, #6b5b45, #c6bba4);
+  color: #fffdd0;
+}
+
+.yes-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.no-button {
+  background: linear-gradient(45deg, #3b2e26, #5e5346);
+  color: #c6bba4;
+}
+
+.no-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.nickname-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.nickname-input {
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 2px solid #c6bba4;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fffdd0;
+  font-size: 1.1rem;
+  outline: none;
+  text-align: center;
+  width: 250px;
+  transition: border-color 0.3s ease;
+}
+
+.nickname-input:focus {
+  border-color: #fffdd0;
+}
+
+.no-message {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #ffdddd;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
