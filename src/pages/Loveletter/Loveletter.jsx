@@ -148,7 +148,7 @@ function Loveletter() {
       ) : !showImage ? (
         <div className="letter-layout">
           <div className="image-gallery">
-            <img src="/assets/IMG_4267.jpg" alt="Me and you :>" className="memory-image" />
+            <img src={`${process.env.PUBLIC_URL}/assets/IMG_4267.jpg`} alt="Me and you :>" className="memory-image" />
           </div>
           <div className="letter-content">
             <p className="letter-text">My dearest, Frances</p>
@@ -185,7 +185,7 @@ function Loveletter() {
         </div>
       ) : (
         <div className="image-display">
-          <img src="/assets/Origin (1350 x 1350 px).jpg" alt="Special image" className="special-image" />
+          <img src={`${process.env.PUBLIC_URL}/assets/Origin (1350 x 1350 px).jpg`} alt="Special image" className="special-image" />
         </div>
       )}
     </div>
