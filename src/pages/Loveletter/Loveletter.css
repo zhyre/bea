@@ -105,8 +105,7 @@
   width: 100%;
   max-width: 500px;
   height: auto;
-  max-height: 90vh;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -155,8 +154,8 @@
 }
 
 .letter-signature {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: normal;
   color: #FFFDD0;
   margin-top: 30px;
   animation: bounceIn 1s ease-out 0.8s both;
@@ -167,6 +166,45 @@
   50% { opacity: 1; transform: scale(1.05); }
   70% { transform: scale(0.9); }
   100% { opacity: 1; transform: scale(1); }
+}
+
+.next-button {
+  background: linear-gradient(45deg, #45382B, #575246);
+  border: none;
+  color: #c6bba4;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  position: relative;
+  margin-top: 20px;
+  animation: pulse 2s infinite;
+}
+
+.next-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.special-image {
+  max-width: 90%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(87, 82, 70, 0.8);
 }
 
 @media (max-width: 768px) {
@@ -187,8 +225,8 @@
   }
 
   .memory-image {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 
   .letter-content {
@@ -200,6 +238,11 @@
 
   .letter-text {
     font-size: 1rem;
+  }
+
+  .next-button {
+    margin-top: 20px;
+    align-self: center;
   }
 }
 
