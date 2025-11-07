@@ -28,7 +28,7 @@ function Home() {
   return (
     <div className="home-container">
       <div className="profile-circle">
-        <img src="/assets/IMG_2453.jpg" alt="My Baby Bea" className="profile-image" />
+        <img src={`${process.env.PUBLIC_URL}/assets/IMG_2453.jpg`} alt="My Baby Bea" className="profile-image" />
       </div>
 
       {step === 1 && (
